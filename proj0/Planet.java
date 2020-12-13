@@ -19,7 +19,7 @@ public class Planet {
         this.xxPos = p.xxPos;
         this.yyPos = p.yyPos;
         this.xxVel = p.xxVel;
-        this.yyPos = p.yyPos;
+        this.yyVel = p.yyVel;
         this.mass = p.mass;
         this.imgFileName = p.imgFileName;
     }
