@@ -37,20 +37,22 @@ public class NBody {
             allPlanets[i].draw();
         }
         StdDraw.enableDoubleBuffering();
-        for (double time = 0; time <= T - dt; time += dt) {
+        for (double time = 0; time <= T ; time += dt) {
             double [] xForces = new double[allPlanets.length];
             double [] yForces = new double[allPlanets.length];
             for (int j = 0; j < allPlanets.length; j++) {
                 xForces[j] = allPlanets[j].calcNetForceExertedByX(allPlanets);
                 yForces[j] = allPlanets[j].calcNetForceExertedByY(allPlanets);
-                allPlanets[j].update(dt, xForces[j], yForces[j]);
             }
-            StdDraw.picture (0,0,background);
+            for ( int k = 0; k <allPlanets.length; k++){
+                allPlanets[k].update(dt, xForces[k], yForces[k]);
+            }
+            /*StdDraw.picture (0,0,background);
             for (int i = 0; i < allPlanets.length; i++ ) {
                 allPlanets[i].draw();
             }
             StdDraw.show();
-            StdDraw.pause(1);
+            StdDraw.pause(1);*/
         }
         StdOut.printf("%d\n", allPlanets.length);
         StdOut.printf("%.2e\n", Radius);
