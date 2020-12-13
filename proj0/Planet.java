@@ -5,7 +5,7 @@ public class Planet {
     public double xxVel;
     public double yyVel;
     public String imgFileName;
-    public final double G = 6.67 * 1.0e-11;
+    private final double G = 6.67 * 1.0e-11; // mistake1
     public Planet(double xP, double yP, double xV,
                   double yV, double m, String img) {
         xxPos = xP;
