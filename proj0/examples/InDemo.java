@@ -11,9 +11,8 @@ public class InDemo {
 			System.out.println("For countries with spaces, use an underscore, e.g. South_Korea");
 			/* NOTE: Please don't use System.exit() in your code.
 			   It will break the autograder. */
-			System.exit(0);
-		}	
-
+			/*System.exit(0); */
+		}
 		/* Start reading in national_salt_production.txt */
 		In in = new In("national_salt_production.txt");
 		
@@ -27,7 +26,7 @@ public class InDemo {
 			int tons = in.readInt();
 			double fractionProduced = in.readDouble();
 			if (name.equals(args[0])) {
-				System.out.println(args[0] + " produces " +
+				System.out.println( args[0] + " produce" +
 					               tons + " of salt per year. Very nice!");
 			}			
 		}
